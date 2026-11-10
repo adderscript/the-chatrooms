@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Go Chat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="chat">
+
+        <header>
+            <h1>Go Chat</h1>
+            <p id="status">Disconnected</p>
+        </header>
+
+        <!--
+            This is where messages will appear.
+
+            JavaScript will create a new element
+            for every message received from the server.
+        -->
+        <div id="messages"></div>
+
+        <!--
+            The form handles sending messages.
+
+            We use a form so pressing Enter also
+            submits the message.
+        -->
+        <form id="message-form">
+            <input
+                id="message-input"
+                type="text"
+                placeholder="Write a message..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">Send</button>
+        </form>
+
+    </main>
+
+    <script src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+/* Remove the browser's default spacing. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1a1b26;
+    color: #c0caf5;
+    font-family: Arial, sans-serif;
+
+    /* Center the chat window. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.chat {
+    width: 90%;
+    max-width: 600px;
+    height: 600px;
+
+    background: #24283b;
+    border: 1px solid #414868;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    padding: 20px;
+    border-bottom: 1px solid #414868;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+header p {
+    color: #9ece6a;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Message container. */
+#messages {
+    flex: 1;
+    padding: 20px;
+
+    /* Allow scrolling when there are lots of messages. */
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual chat message. */
+.message {
+    background: #1a1b26;
+    padding: 12px;
+    border-radius: 8px;
+
+    /* Prevent long messages from overflowing. */
+    overflow-wrap: anywhere;
+}
+
+.message .username {
+    color: #7aa2f7;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.message .time {
+    color: #565f89;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+.message .text {
+    margin-top: 6px;
+}
+
+/* System messages, such as users joining. */
+.system-message {
+    color: #9ece6a;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Message input form. */
+#message-form {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    border-top: 1px solid #414868;
+}
+
+#message-input {
+    flex: 1;
+    min-width: 0;
+
+    background: #1a1b26;
+    color: #c0caf5;
+
+    border: 1px solid #414868;
+    border-radius: 6px;
+
+    padding: 12px;
+    outline: none;
+}
+
+#message-input:focus {
+    border-color: #7aa2f7;
+}
+
+button {
+    background: #7aa2f7;
+    color: #1a1b26;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 0 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #89b4fa;
+}
